@@ -13,6 +13,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "ganache": "^7.9.2",
+    "lite-server": "^2.3.0",
+    "solc": "^0.5.16",
+    "truffle": "^5.11.5"
   }
 }
+
+

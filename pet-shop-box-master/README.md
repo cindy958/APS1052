@@ -2,39 +2,40 @@
 
 This box has all you need to get started with our [Pet Shop tutorial](http://truffleframework.com/tutorials/pet-shop).
 
+## Attribution (Important)
+
+This project is **based on the Truffle Pet Shop tutorial / Truffle Box seed DApp**. We extended the seed by adding **six major features** (each involving smart contract + front-end changes) for the APS1050 programming project requirement.
+
+## Our 6 Major Features (APS1050)
+
+1. **Donate to Petshop** (contract: `donate()` + stats + `PetshopDonation`; front-end: donation form + live totals)
+2. **Pet Like (Voting)** (contract: `likePet()`/`getLikes()` + `PetLiked`; front-end: Like button + likes display)
+3. **Donate to a Specific Pet** (contract: preset/custom donate + totals + `PetDonation`; front-end: per-pet donate UI + totals)
+4. **Buy a Pet** (contract: `buyPet()` + sold checks + `PetBuy`; front-end: Buy button + status updates)
+5. **Petshop Rating (1–5 Stars)** (contract: `ratePetshop()` + average/count + `PetshopRated`; front-end: rating panel + live stats)
+6. **Vaccination Records** (contract: owner-only `addVaccination()` + getters + `PetVaccination`; front-end: add/view vaccination UI)
+
 ## Installation
 
-1. Install Truffle globally.
-    ```javascript
-    npm install -g truffle
-    ```
+See `SETUP.md` for **full setup steps + required version numbers** (Node/Truffle/Ganache/Solidity/web3/lite-server) and Windows PowerShell notes.
 
-2. Download the box. This also takes care of installing the necessary dependencies.
-    ```javascript
-    truffle unbox pet-shop
-    ```
+## Quick Start (after setup)
 
-3. Run the development console.
-    ```javascript
-    truffle develop
-    ```
+From this folder:
 
-4. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
-    ```javascript
-    compile
-    migrate
-    ```
+1. Start Ganache GUI (RPC **`127.0.0.1:7545`**, **chainId=1337**, **networkId=1337**)
+2. Deploy contracts:
 
-5. Run the `liteserver` development server (outside the development console) for front-end hot reloading. Smart contract changes must be manually recompiled and migrated.
-    ```javascript
-    // Serves the front-end on http://localhost:3000
-    npm run dev
-    ```
+```bash
+npx truffle migrate --reset --network development
+```
 
-**NOTE**: This box is not a complete dapp, but the starting point for the [Pet Shop tutorial](http://truffleframework.com/tutorials/pet-shop). You'll need to complete that for this to function.
+3. Run the front-end:
 
-## FAQ
+```bash
+npm run dev
+```
 
-* __How do I use this with the EthereumJS TestRPC?__
+Then open **`http://localhost:3000`**.
 
-    It's as easy as modifying the config file! [Check out our documentation on adding network configurations](http://truffleframework.com/docs/advanced/configuration#networks). Depending on the port you're using, you'll also need to update line 16 of `src/js/app.js`.
+
