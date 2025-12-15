@@ -1,6 +1,6 @@
 This folder contains the **minimum set of files** you should commit/share (to avoid committing `node_modules/`) to reproduce the APS1050 Petshop DApp changes.
 
-## How teammates apply this update
+## How apply this update
 
 1) Start from the professor baseline project folder: `pet-shop-box-master/` (fresh, clean, without `node_modules/`).
 
